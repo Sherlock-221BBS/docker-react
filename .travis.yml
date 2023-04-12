@@ -1,7 +1,7 @@
 sudo: required
 services: 
   - docker 
-before_script: 
+before_install: 
   - docker build -t taki135/docker-react -f Dockerfile.dev
 scripts:
   - docker run taki135/docker-react npm run test -- --coverage
