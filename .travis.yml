@@ -4,4 +4,4 @@ services:
 before_install: 
   - docker build -t taki135/docker-react -f Dockerfile.dev .
 script:
-  - docker run --rm taki135/docker-react npm run test  
+  - docker run --rm taki135/docker-react npm run test -- --coverage --watchAll=false
